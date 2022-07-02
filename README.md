@@ -1,3 +1,5 @@
+![NPM Badge](https://img.shields.io/npm/v/input-map?style=flat-square)
+
 # Input Map
 
 An input manager and utilities for JavaScript/Typescript and React apps.
