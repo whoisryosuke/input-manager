@@ -13,7 +13,7 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "../../README.md"
   ],
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
