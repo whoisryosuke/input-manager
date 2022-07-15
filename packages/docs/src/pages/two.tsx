@@ -1,7 +1,7 @@
-import dynamic from "next/dynamic";
+import dynamic from "next/dynamic"
 const Box = dynamic(() => import("@/components/canvas/Box"), {
-  ssr: false,
-});
+  ssr: false
+})
 
 // DOM elements here
 const DOM = () => {
@@ -11,13 +11,13 @@ const DOM = () => {
         width: "100%",
         display: "flex",
         alignContent: "center",
-        justifyContent: "center",
+        justifyContent: "center"
       }}
     >
       <h1>Combine your DOM and 3D</h1>
     </div>
-  );
-};
+  )
+}
 
 // Canvas/R3F components here
 const R3F = () => {
@@ -27,8 +27,8 @@ const R3F = () => {
       <axesHelper />
       <Box route="/" />
     </>
-  );
-};
+  )
+}
 
 // We assume first component is DOM
 // second component is Canvas/R3F
@@ -39,13 +39,13 @@ export default function Page() {
       <DOM />
       <R3F />
     </>
-  );
+  )
 }
 
 export async function getStaticProps() {
   return {
     props: {
-      title: "Page two",
-    },
-  };
+      title: "Page two"
+    }
+  }
 }

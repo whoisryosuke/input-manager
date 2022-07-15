@@ -5,5 +5,5 @@ export default function Error500() {
     <>
       <h1>500 - Something went wrong</h1>
     </>
-  );
+  )
 }

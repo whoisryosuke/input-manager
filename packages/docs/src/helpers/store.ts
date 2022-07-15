@@ -1,11 +1,11 @@
-import { Router } from "next/router";
-import create from "zustand";
-import { devtools, persist } from "zustand/middleware";
+import { Router } from "next/router"
+import create from "zustand"
+import { devtools, persist } from "zustand/middleware"
 
 export interface AppState {
   // NextJS router
-  router: Router;
-  setRouter: (router) => void;
+  router: Router
+  setRouter: (router) => void
 
   // Add any types for app-wide state here
   // e.g. game start logic, points/score, etc
@@ -26,8 +26,8 @@ export const useStore = create<AppState>()(
       setRouter: (router) =>
         set((state) => ({
           ...state,
-          router,
-        })),
+          router
+        }))
 
       // Add any default values for app-wide state here
       // e.g. game start logic, points/score, etc
@@ -38,6 +38,6 @@ export const useStore = create<AppState>()(
     // END: Optional persist
     // )
   )
-);
+)
 
-export default useStore;
+export default useStore

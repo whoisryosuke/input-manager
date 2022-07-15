@@ -1,4 +1,16 @@
 {
   "extends": "../../tsconfig.json",
-  "rootDir": "src",
+  "compilerOptions": {
+    "rootDir": "src",
+    "allowSyntheticDefaultImports": true,
+  },
+  "exclude": [
+    "node_modules",
+    "dist/**/*"
+  ],
+  "paths": {
+    "@/*": [
+      "src/*"
+    ]
+  },
 }

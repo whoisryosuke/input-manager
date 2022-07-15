@@ -1,8 +1,8 @@
-const plugins = require("next-compose-plugins");
+const plugins = require("next-compose-plugins")
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
-const withOffline = require("next-offline");
+  enabled: process.env.ANALYZE === "true"
+})
+const withOffline = require("next-offline")
 
 // The NextJS config defined separately
 // Gets passed to next-offline
@@ -13,19 +13,19 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.(glsl|vs|fs|vert|frag|ps)$/,
       exclude: /node_modules/,
-      use: ["raw-loader", "glslify-loader"],
-    });
+      use: ["raw-loader", "glslify-loader"]
+    })
 
-    return config;
+    return config
   },
 
   // Internationalized Routing
   // @see: https://nextjs.org/docs/advanced-features/i18n-routing
   i18n: {
     locales: ["en-US"],
-    defaultLocale: "en-US",
-  },
-};
+    defaultLocale: "en-US"
+  }
+}
 
 module.exports = plugins(
   [
@@ -35,9 +35,9 @@ module.exports = plugins(
       withOffline,
       {
         // Optional offline config
-      },
+      }
     ],
-    withBundleAnalyzer,
+    withBundleAnalyzer
   ],
   nextConfig
-);
+)

@@ -1,10 +1,7 @@
-import Input from "./modules/input";
-import useKeyPress from "./hooks/useKeyPress";
-import { gamepads, joymap } from "./utils/gamepad";
+import Gamepad from "./components/Gamepad"
+import Input from "./modules/input"
+import useKeyPress from "./hooks/useKeyPress"
+import { DeviceList } from "./types"
+import Keyboard from "./components/Keyboard"
 
-export {
-    Input,
-    useKeyPress,
-    gamepads,
-    joymap
-}
+export { Input, Keyboard, Gamepad, useKeyPress, DeviceList }

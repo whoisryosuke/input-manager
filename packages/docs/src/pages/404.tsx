@@ -5,5 +5,5 @@ export default function Error404() {
     <>
       <h1>404 - Something went wrong</h1>
     </>
-  );
+  )
 }
